@@ -22,6 +22,8 @@ internal class ToDoTaskManager {
 
     fun addNewTaskItemInTaskList(index: Int, text: String, priority: Byte): String? {
         if (priority in 0..10) {
+
+
             try {
                 return arrayOfTaskList.get(index - 1).addTaskItem(text, priority)
             } catch (e: IndexOutOfBoundsException) {
